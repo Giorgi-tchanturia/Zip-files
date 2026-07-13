@@ -1,0 +1,66 @@
+/*მობილურის ბაზისი (Mobile-First) */
+
+.footer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #1e1e24;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  margin-top: auto;
+    
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  text-align: center;
+}
+
+.linksBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link {
+  color: #aaaaae;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #ffffff;
+}
+
+.copyright {
+  color: #70707a;
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+
+/*  დესკტოპის და პლანშეტის ვერსია (769px და ზევით) */
+
+@media (min-width: 769px) {
+  .footer {
+    padding: 32px 40px;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: space-between; 
+    text-align: left;
+  }
+
+  .linksBlock {
+    flex-direction: row;
+    gap: 24px;
+  }
+}

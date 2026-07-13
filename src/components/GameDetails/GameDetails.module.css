@@ -1,0 +1,230 @@
+/* მობილურის ბაზისი (Mobile-First) */
+
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px; 
+  color: white;
+}
+
+
+.heroBanner {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column; 
+  gap: 32px;
+}
+
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin: 0;
+  line-height: 1.2;
+  
+}
+
+.metaTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #2a2a35;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #aaaaae;
+}
+
+.description h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #e0e0e0;
+}
+
+.description p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #aaaaae;
+  margin: 0;
+}
+
+
+.sidebar {
+  width: 100%;
+}
+
+.buyCard {
+  background-color: #1e1e24;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #2d2d38;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.price {
+  font-size: 2rem;
+  margin: 0;
+  color: #4CAF50;
+}
+
+.primaryBtn, .secondaryBtn {
+  width: 100%; 
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.primaryBtn {
+  background-color: #ffffff;
+  border: 1px solid #18181b;
+  color: #000000;
+}
+
+.secondaryBtn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.primaryBtn:hover, .secondaryBtn:hover {
+  opacity: 0.8;
+}
+
+.platforms {
+  text-align: center;
+  color: #70707a;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+
+
+/* დესკტოპის და პლანშეტის ვერსია (769px და ზევით) */
+
+@media (min-width: 769px) {
+  .container {
+    padding: 32px 40px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+  }
+
+  .heroBanner {
+    height: 400px; 
+    aspect-ratio: auto;
+  }
+
+  .contentWrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .mainInfo {
+    flex: 2; 
+  }
+
+  .sidebar {
+    flex: 1; 
+    position: sticky;
+    top: 24px; 
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description p {
+    font-size: 16px;
+  }
+}
+
+/* Light-theme colours are scoped to this page so the game details remain readable. */
+:global([data-theme='light']) .container {
+  color: #18181b;
+}
+
+:global([data-theme='light']) .title,
+:global([data-theme='light']) .description h3 {
+  color: #18181b;
+}
+
+:global([data-theme='light']) .description p {
+  color: #52525b;
+}
+
+:global([data-theme='light']) .tag {
+  background-color: #e4e4e7;
+  color: #3f3f46;
+}
+
+:global([data-theme='light']) .buyCard {
+  background-color: #ffffff;
+  border-color: #d4d4d8;
+  box-shadow: 0 8px 24px rgba(24, 24, 27, 0.08);
+}
+
+:global([data-theme='light']) .secondaryBtn {
+  border-color: #18181b;
+  color: #18181b;
+}
+
+:global([data-theme='light']) .platforms {
+  color: #71717a;
+}
+
+:global([data-theme='light']) .reviewsSection h2 {
+  color: #18181b !important;
+}
+
+:global([data-theme='light']) .reviewsSection p {
+  color: #52525b !important;
+}
+
+/* Posted review cards match the light-theme input treatment. */
+:global([data-theme='light']) .reviewsSection > div > div {
+  background-color: #ffffff !important;
+  border-color: #18181b !important;
+}
+
+:global([data-theme='light']) .reviewsSection > div > div p {
+  color: #18181b !important;
+}
+
+:global([data-theme='light']) .reviewsSection textarea {
+  background-color: #ffffff !important;
+  border: 1px solid #18181b !important;
+  color: #18181b !important;
+}
+
+:global([data-theme='light']) .reviewsSection textarea::placeholder {
+  color: #71717a;
+}

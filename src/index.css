@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212; 
+  color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+[data-theme='dark'] {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] p,
+[data-theme='dark'] span {
+  color: #ffffff !important;
+}
+
+/* Keep the featured game's white call-to-action readable in dark mode. */
+[data-theme='dark'] [class*="featureCta"] {
+  color: #18181b !important;
+}
+
+[data-theme='light'] {
+  background-color: #f4f4f5 !important;
+  color: #18181b !important;
+}
+
+[data-theme='light'] h2:not([class*="authTitle"]),
+[data-theme='light'] .sectionTitle {
+  color: #18181b !important;
+}

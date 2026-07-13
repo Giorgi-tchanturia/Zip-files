@@ -1,0 +1,201 @@
+/* მობილურის ბაზისი (Mobile-First) */
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px 16px;
+}
+
+.heading {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.sectionHeader .heading {
+  margin-bottom: 0;
+}
+
+.total {
+  color: #4CAF50;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.owned {
+  color: #4CAF50;
+  font-weight: 600;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.checkoutBtn {
+  margin-top: 16px;
+  width: 100%;
+  background-color: #0074e4;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.checkoutBtn:hover {
+  background-color: #0063c2;
+  transform: translateY(-1px);
+}
+
+.emptyContainer {
+  padding: 40px 16px;
+  text-align: center;
+  color: #a0a0ab;
+}
+
+.emptyContainer h2 {
+  color: white;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: 100%; 
+}
+
+.card {
+  width: auto; 
+  box-sizing: border-box; 
+  background-color: #1e1e24;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  /* background: red !important; */
+  gap: 12px;
+  border: 1px solid #2d2d38;
+}
+
+.image {
+  width: 70px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.info {
+  flex: 1;
+  overflow: hidden;
+  min-width: 0; 
+}
+
+.info h3 {
+  font-size: 0.9rem;
+  color: white;
+  margin: 0 0 4px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  color: #4CAF50;
+  font-weight: bold;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.removeBtn {
+  flex-shrink: 0;
+  white-space: nowrap;
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 12px;
+  transition: opacity 0.2s ease;
+}
+
+.removeBtn:hover {
+  opacity: 0.85;
+}
+
+
+/*დესკტოპის და პლანშეტის ვერსია (769px და ზევით) */
+
+@media (min-width: 769px) {
+  .container {
+    padding: 32px 24px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+  }
+
+  .emptyContainer {
+    padding: 60px 24px;
+  }
+
+  .emptyContainer h2 {
+    font-size: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .image {
+    width: 80px;
+    height: 50px;
+  }
+
+  .info h3 {
+    font-size: 1rem;
+    margin: 0 0 6px 0;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .removeBtn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .checkoutBtn {
+    width: auto;
+    align-self: flex-end;
+    padding: 14px 28px;
+  }
+}
