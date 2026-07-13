@@ -1,0 +1,252 @@
+/* მობილურის ბაზისი (Mobile-First) */
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.heading {
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin: 0 0 24px 0;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form {
+  background-color: #1e1e24;
+  border: 1px solid #2d2d38;
+  border-radius: 12px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-sizing: border-box;
+}
+
+.sectionTitle {
+  color: #ffffff;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.inputRow {
+  display: flex;
+  gap: 12px;
+}
+
+.inputRow .inputGroup {
+  flex: 1;
+  min-width: 0;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  color: #aaaaae;
+  font-size: 14px;
+}
+
+.inputGroup input {
+  background-color: #121216;
+  border: 1px solid #2d2d38;
+  border-radius: 8px;
+  padding: 12px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.inputGroup input:focus {
+  border-color: #ffffff;
+}
+
+.inputGroup input.errorInput {
+  border-color: #ff4757;
+}
+
+.errorText {
+  color: #ff4757;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.submitBtn {
+  background-color: #0074e4;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.submitBtn:hover {
+  background-color: #0063c2;
+  transform: translateY(-1px);
+}
+
+.summary {
+  background-color: #1a1a1a;
+  border: 1px solid #252525;
+  border-radius: 12px;
+  padding: 24px 16px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+.summaryList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.summaryImage {
+  width: 48px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.summaryTitle {
+  flex: 1;
+  color: #eeeeee;
+  font-size: 0.85rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.summaryPrice {
+  color: #aaaaae;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #2d2d38;
+  padding-top: 16px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.summaryTotal span:last-child {
+  color: #4CAF50;
+}
+
+.successCard {
+  background-color: #1e1e24;
+  border: 1px solid #2d2d38;
+  border-radius: 12px;
+  padding: 48px 24px;
+  text-align: center;
+  max-width: 480px;
+  margin: 40px auto 0;
+}
+
+.successIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  color: #ffffff;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.successCard h2 {
+  color: #ffffff;
+  margin: 0 0 12px 0;
+}
+
+.orderNumber {
+  color: #70707a;
+  font-size: 0.85rem;
+  margin: 0 0 16px 0;
+}
+
+.successText {
+  color: #aaaaae;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 28px 0;
+}
+
+.primaryBtn {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.primaryBtn:hover {
+  opacity: 0.9;
+}
+
+/* დესკტოპის ვერსია (769px და ზევით) */
+
+@media (min-width: 769px) {
+  .container {
+    padding: 40px 24px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .form {
+    flex: 2;
+    padding: 32px;
+  }
+
+  .summary {
+    flex: 1;
+    position: sticky;
+    top: 24px;
+    padding: 24px;
+  }
+}
+
+
